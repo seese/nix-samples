@@ -52,13 +52,13 @@
 
 ```
 
-### Recursive Attribute sets
+### Recursive Attribut-Sets
 
 ```nix
 rec { a = 3; b = a + 3; }
 ```
 
-### If expressions
+### If-Expressions
 
 ```nix
 let
@@ -68,7 +68,7 @@ in
 if a > b then "yes" else "no"
 ```
 
-### Let expression
+### Let-Expression
 
 ```nix
 let a = 100; in a
@@ -94,7 +94,7 @@ Auf Variablen verweisen
 let a = 100; b = (a + 100); in b
 ```
 
-### With expression
+### With-Expression
 
 ```nix
 let a = { x = 1; y = 2; }; in with a; x + y
@@ -183,13 +183,13 @@ Die Funktion erwartet ein *Set* als argument. Folgende Attribute müssen im Set
 * system
 * builder
 
-```nix
+```nix-repl
 :l <nixpkgs>
 "${coreutils}"
 d = derivation { name = "myname"; builder = "${coreutils}/bin/true"; system = builtins.currentSystem; }
 ```
 
-```nix
+```nix-repl
 :l <nixpkgs>
 simple = derivation { name = "simple"; builder = "${bash}/bin/bash"; args = [ ./simple_builder.sh ]; gcc = gcc; coreutils = coreutils; src = ./simple.c; system = builtins.currentSystem; }
 :b simple
