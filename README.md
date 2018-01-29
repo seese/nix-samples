@@ -13,10 +13,18 @@
 * nix-store -q --references $(which nix-repl)
 * nix-store -q --referrers $(which nix-repl)
 
-### Closure
+### Closures
 
-* nix-store -qR `which nix-repl`
-* nix-store -q --tree `which nix-repl`
+* nix-store -qR $(which nix-repl)
+* nix-store -q --tree $(which nix-repl)
+
+### Realize
+
+* nix-store -r $(nix-instantiate ./test.nix)
+
+### Garbage Collection
+
+* nix-store --gc
 
 ## Nix-language
 
