@@ -27,8 +27,8 @@ Bindestrich in Variablennamen erlaubt
 ### strings
 
 ```nix
-val1 = "foo"
-val2 = ''foo''
+"foo"
+''foo''
 
 # interpolation
 "${val1}"
@@ -42,13 +42,13 @@ val2 = ''foo''
 ### lists
 
 ```nix
-l = [ 1 "foo" true (2 + 3) ]
+[ 1 "foo" true (2 + 3) ]
 ```
 
 ### attribute sets
 
 ```nix
-s = { foo = "bar"; a-b = ''foo''; "123" = "num"; }
+{ foo = "bar"; a-b = ''foo''; "123" = "num"; }
 
 ```
 
