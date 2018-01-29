@@ -20,9 +20,9 @@
 
 ## nix-language
 
-keine Division -> bultins.div
-2/3 -> wird als Pfad geparst - relativ zum aktuellen Verzeichnis
-Bindestrich in Variablennamen erlaubt
+* keine Division -> bultins.div
+* 2/3 -> wird als Pfad geparst - relativ zum aktuellen Verzeichnis
+* Bindestrich in Variablennamen erlaubt
 
 ### strings
 
