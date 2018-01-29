@@ -72,13 +72,25 @@ if a > b then "yes" else "no"
 
 ```nix
 let a = 100; in a
+```
+
+```nix
 let a = 100; b = 200; in a + b
+```
+
+```nix
 let a = 100; in let b = 1000; in a + b
+```
 
-# shadow variables
+Variablen verdecken
+
+```nix
 let a = 100; in let a = 200; in a
+```
 
-# refer to variables
+Auf Variablen verweisen
+
+```nix
 let a = 100; b = (a + 100); in b
 ```
 
