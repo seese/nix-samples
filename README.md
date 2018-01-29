@@ -10,8 +10,8 @@
 
 ## nix-store
 
-* nix-store -q --references `which nix-repl`
-* nix-store -q --referrers `which nix-repl`
+* nix-store -q --references ``which nix-repl``
+* nix-store -q --referrers ``which nix-repl``
 
 ### Closure
 
