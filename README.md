@@ -2,21 +2,21 @@
 
 ## nix-env
 
-nix-env -i nmap
-nix-env --list-generations
-nix-env -q
-nix-env --rollback
-nix-env -G 3
+* nix-env -i nmap
+* nix-env --list-generations
+* nix-env -q
+* nix-env --rollback
+* nix-env -G 3
 
 ## nix-store
 
-nix-store -q --references `which nix-repl`
-nix-store -q --referrers `which nix-repl`
+* nix-store -q --references `which nix-repl`
+* nix-store -q --referrers `which nix-repl`
 
 ### Closure
 
-nix-store -qR `which nix-repl`
-nix-store -q --tree `which nix-repl`
+* nix-store -qR `which nix-repl`
+* nix-store -q --tree `which nix-repl`
 
 ## nix-language
 
