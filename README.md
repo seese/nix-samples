@@ -18,13 +18,13 @@
 * nix-store -qR `which nix-repl`
 * nix-store -q --tree `which nix-repl`
 
-## nix-language
+## Nix-language
 
 * keine Division -> bultins.div
 * 2/3 -> wird als Pfad geparst - relativ zum aktuellen Verzeichnis
 * Bindestrich in Variablennamen erlaubt
 
-### strings
+### Strings
 
 ```nix
 "foo"
@@ -39,26 +39,26 @@
 ''''${val1}}
 ```
 
-### lists
+### Listen
 
 ```nix
 [ 1 "foo" true (2 + 3) ]
 ```
 
-### attribute sets
+### Attribute sets
 
 ```nix
 { foo = "bar"; a-b = ''foo''; "123" = "num"; }
 
 ```
 
-### recursive attribute sets
+### Recursive Attribute sets
 
 ```nix
 rec { a = 3; b = a + 3; }
 ```
 
-### if expressions
+### If expressions
 
 ```nix
 let
@@ -68,7 +68,7 @@ in
 if a > b then "yes" else "no"
 ```
 
-### let expression
+### Let expression
 
 ```nix
 let a = 100; in a
@@ -94,13 +94,13 @@ Auf Variablen verweisen
 let a = 100; b = (a + 100); in b
 ```
 
-### with expression
+### With expression
 
 ```nix
 let a = { x = 1; y = 2; }; in with a; x + y
 ```
 
-### functions
+### Funktionen
 
 ```nix
 let 
@@ -109,7 +109,7 @@ in
 mul 5 6
 ```
 
-#### argument sets
+#### Argument-Sets
 
 ```nix
 let 
@@ -118,7 +118,7 @@ in
 setMul { a = 5; b = 6; }
 ```
 
-#### default arguments
+#### Argumente mit Standard-Werten
 
 ```nix
 let
@@ -127,7 +127,7 @@ in
 mul { a = 5; }
 ```
 
-#### variadic arguments
+#### Variadische Argumente
 
 ```nix
 let
@@ -136,7 +136,7 @@ in
 mul { a = 2; b = 3; c = 4; }
 ```
 
-#### variadic arguments und @pattern
+#### Variadische Argumente und @-Pattern
 
 ```nix
 let
@@ -145,7 +145,7 @@ in
 mul { a = 2; b = 3; c = 4; }
 ```
 
-### imports
+### Importe
 
 a.nix:
 ```nix
