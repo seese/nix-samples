@@ -61,8 +61,10 @@ rec { a = 3; b = a + 3; }
 ### if expressions
 
 ```nix
-a = 3
-b = 4
+let
+a = 1;
+b = 2;
+in
 if a > b then "yes" else "no"
 ```
 
