@@ -182,8 +182,8 @@ mul a b
 
 ### Derivation
 
-* Erzeugen mti der built-in Funktion *derivation*
-* Funktionsparameter ist ein Set mit folgenden *Muss-Werten*:
+* Erzeugen mti der built-in Funktion **derivation**
+* Funktionsparameter ist ein Set mit folgenden **Muss-Werten**:
   * name
   * system
   * builder
