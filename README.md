@@ -184,9 +184,9 @@ mul a b
 
 * Erzeugen mti der built-in Funktion *derivation*
 * Funktionsparameter ist ein Set mit folgenden *Muss-Werten*:
- * name
- * system
- * builder
+  * name
+  * system
+  * builder
 
 ```nix-repl
 :l <nixpkgs>
