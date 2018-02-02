@@ -182,10 +182,8 @@ mul a b
 
 ### Derivation
 
-Ein *derivation* wird mit der built-in Funktion derivation erzeugt. 
-
-Die Funktion erwartet ein *Set* als argument. Folgende Attribute müssen im Set
-übergeben werden:
+* Erzeugen mti der built-in Funktion *derivation*
+* Funktionsparameter ist ein Set mit folgenden *Muss-Werten*:
 
 * name
 * system
