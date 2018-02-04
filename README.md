@@ -33,6 +33,11 @@
   * configurePhase
   * buildPhase 
 
+## nix-collect-garbage
+
+* nix-collect-garbage
+* nix-collect-garbage -d
+
 ## nix-language
 
 * keine Division -> bultins.div
