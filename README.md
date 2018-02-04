@@ -192,6 +192,21 @@ in
 mul a b
 ```
 
+### inherit
+
+```nix
+let
+val1 = "val1";
+s = {
+  val2 = "val2";
+  inherit val1;
+};
+in
+s
+```
+
+Ergebnis: `{ val1 = "val1"; val2 = "val2"; }`
+
 ### derivation
 
 * Erzeugen mti der built-in Funktion **derivation**
