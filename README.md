@@ -13,6 +13,13 @@
 * nix-store -q --references $(which nix-repl)
 * nix-store -q --referrers $(which nix-repl)
 
+## nix-shell
+
+* nix-shell '<nixpkgs>' -A i3-gaps
+  * unpackPhase
+  * configurePhase
+  * buildPhase 
+
 ### Closures
 
 * nix-store -qR $(which nix-repl)
