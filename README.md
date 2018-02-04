@@ -114,7 +114,7 @@ Auf Variablen verweisen
 let a = 100; b = (a + 100); in b
 ```
 
-### With-Expression
+### with-expression
 
 ```nix
 let a = { x = 1; y = 2; }; in with a; x + y
