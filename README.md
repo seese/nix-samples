@@ -13,16 +13,16 @@
 * nix-store -q --references $(which nix-repl)
 * nix-store -q --referrers $(which nix-repl)
 
-### Closures
+### closures
 
 * nix-store -qR $(which nix-repl)
 * nix-store -q --tree $(which nix-repl)
 
-### Realize
+### realize
 
 * nix-store -r $(nix-instantiate ./test.nix)
 
-### Garbage Collection
+### garbage collection
 
 * nix-store --gc
 
@@ -33,13 +33,13 @@
   * configurePhase
   * buildPhase 
 
-## Nix-language
+## nix-language
 
 * keine Division -> bultins.div
 * 2/3 -> wird als Pfad geparst - relativ zum aktuellen Verzeichnis
 * Bindestrich in Variablennamen erlaubt
 
-### Strings
+### strings
 
 ```nix
 "foo"
@@ -54,26 +54,26 @@
 ''''${val1}}
 ```
 
-### Listen
+### listen
 
 ```nix
 [ 1 "foo" true (2 + 3) ]
 ```
 
-### Attribute sets
+### attribute sets
 
 ```nix
 { foo = "bar"; a-b = ''foo''; "123" = "num"; }
 
 ```
 
-### Recursive Attribut-Sets
+### recursive Attribut-Sets
 
 ```nix
 rec { a = 3; b = a + 3; }
 ```
 
-### If-Expressions
+### if-expressions
 
 ```nix
 let
@@ -83,7 +83,7 @@ in
 if a > b then "yes" else "no"
 ```
 
-### Let-Expression
+### let-expression
 
 ```nix
 let a = 100; in a
@@ -115,7 +115,7 @@ let a = 100; b = (a + 100); in b
 let a = { x = 1; y = 2; }; in with a; x + y
 ```
 
-### Funktionen
+### funktionen
 
 ```nix
 let 
@@ -124,7 +124,7 @@ in
 mul 5 6
 ```
 
-#### Argument-Sets
+#### argument-Sets
 
 ```nix
 let 
@@ -133,7 +133,7 @@ in
 setMul { a = 5; b = 6; }
 ```
 
-#### Argumente mit Standard-Werten
+#### argumente mit standard-werten
 
 ```nix
 let
@@ -142,7 +142,7 @@ in
 mul { a = 5; }
 ```
 
-#### Variadische Argumente
+#### variadische argumente
 
 ```nix
 let
@@ -151,7 +151,7 @@ in
 mul { a = 2; b = 3; c = 4; }
 ```
 
-#### Variadische Argumente und @-Pattern
+#### variadische argumente und @-pattern
 
 ```nix
 let
@@ -160,7 +160,7 @@ in
 mul { a = 2; b = 3; c = 4; }
 ```
 
-### Importe
+### importe
 
 a.nix:
 ```nix
@@ -187,7 +187,7 @@ in
 mul a b
 ```
 
-### Derivation
+### derivation
 
 * Erzeugen mti der built-in Funktion **derivation**
 * Funktionsparameter ist ein Set mit folgenden **Muss-Werten**:
