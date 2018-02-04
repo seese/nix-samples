@@ -2,12 +2,6 @@
 
 ## nix-env
 
-* nix-env -i nmap
-* nix-env --list-generations
-* nix-env -q
-* nix-env --rollback
-* nix-env -G 3
-
 ```bash
 nix-env -i nmap
 nix-env --list-generations
@@ -18,33 +12,46 @@ nix-env -G 3
 
 ## nix-store
 
-* nix-store -q --references $(which nix-repl)
-* nix-store -q --referrers $(which nix-repl)
+```bash
+nix-store -q --references $(which nix-repl)
+nix-store -q --referrers $(which nix-repl)
+```
 
 ### closures
 
-* nix-store -qR $(which nix-repl)
-* nix-store -q --tree $(which nix-repl)
+```bash
+nix-store -qR $(which nix-repl)
+nix-store -q --tree $(which nix-repl)
+```
 
 ### realize
 
-* nix-store -r $(nix-instantiate ./test.nix)
+```bash
+nix-store -r $(nix-instantiate ./test.nix)
+```
 
 ### garbage collection
 
-* nix-store --gc
+```bash
+nix-store --gc
+```
 
 ## nix-shell
 
-* nix-shell '\<nixpkgs\>' -A i3-gaps
-  * unpackPhase
-  * configurePhase
-  * buildPhase 
+```bash
+nix-shell '\<nixpkgs\>' -A i3-gaps
+```
+
+* unpackPhase
+* configurePhase
+* buildPhase 
 
 ## nix-collect-garbage
 
-* nix-collect-garbage
-* nix-collect-garbage -d
+```bash
+nix-collect-garbage
+nix-collect-garbage -d
+```
 
 ## nix-language
 
