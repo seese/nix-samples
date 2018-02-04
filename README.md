@@ -8,6 +8,14 @@
 * nix-env --rollback
 * nix-env -G 3
 
+```bash
+nix-env -i nmap
+nix-env --list-generations
+nix-env -q
+nix-env --rollback
+nix-env -G 3
+```
+
 ## nix-store
 
 * nix-store -q --references $(which nix-repl)
