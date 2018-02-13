@@ -69,6 +69,15 @@ nix-instantiate --eval ./sample.nix
 * 2/3 -> wird als Pfad geparst - relativ zum aktuellen Verzeichnis
 * Bindestrich in Variablennamen erlaubt
 
+### boolean 
+
+```nix
+! A     # if A then false else true
+A || B  # if A then true else B
+A && B  # if A then B else false
+A -> B  # if A then B else true
+```
+
 ### strings
 
 ```nix
