@@ -53,6 +53,16 @@ nix-collect-garbage
 nix-collect-garbage -d
 ```
 
+## nix-instantiate
+
+```bash
+nix-instantiate --eval --expr '"Hello " + "world"'
+nix-instantiate --eval --expr '2 + 3'
+nix-instantiate --eval --expr '(400 + 2) * (5) + (5 * 5)'
+
+nix-instantiate --eval ./sample.nix
+```
+
 ## nix-language
 
 * keine Division -> bultins.div
@@ -241,4 +251,5 @@ d = derivation { name = "myname"; builder = "${coreutils}/bin/true"; system = bu
 simple = derivation { name = "simple"; builder = "${bash}/bin/bash"; args = [ ./simple_builder.sh ]; gcc = gcc; coreutils = coreutils; src = ./simple.c; system = builtins.currentSystem; }
 :b simple
 ```
+
 
