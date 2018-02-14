@@ -97,6 +97,8 @@ A -> B  # if A then B else true
 
 ```nix
 [ 1 "foo" true (2 + 3) ]
+
+builtins.elemAt [ 1 2 3 ] 1
 ```
 
 ### attribute sets
