@@ -105,7 +105,17 @@ builtins.elemAt [ 1 2 3 ] 1
 
 ```nix
 { foo = "bar"; a-b = ''foo''; "123" = "num"; }
+```
 
+```
+let
+s = { a = 100; b = 200; c = 300; };
+in
+# is a in s?
+if s ? a then
+"yes"
+else
+"no"
 ```
 
 ### recursive Attribut-Sets
