@@ -107,7 +107,7 @@ builtins.elemAt [ 1 2 3 ] 1
 { foo = "bar"; a-b = ''foo''; "123" = "num"; }
 ```
 
-```
+```nix
 let
 s = { a = 100; b = 200; c = 300; };
 in
