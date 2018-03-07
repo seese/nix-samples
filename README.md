@@ -4,10 +4,14 @@
 
 ```bash
 nix-env -i nmap
-nix-env --list-generations
 nix-env -q
 nix-env --rollback
+# switch to generation 3
 nix-env -G 3
+# list user-generations
+nix-env --list-generations
+# list system-generations
+nix-env --list-generations --profile /nix/var/nix/profiles/system
 ```
 
 ## nix-store
