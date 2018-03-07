@@ -43,7 +43,7 @@ nix-store --gc
 ## nix-shell
 
 ```bash
-nix-shell '\<nixpkgs\>' -A i3-gaps
+nix-shell '<nixpkgs>' -A i3-gaps
 ```
 
 * unpackPhase
