@@ -241,6 +241,8 @@ mul a b
 
 ### inherit
 
+#### importieren von werten aus dem umgebenden scope
+
 ```nix
 let
 val1 = "val1";
@@ -253,6 +255,19 @@ s
 ```
 
 Ergebnis: `{ val1 = "val1"; val2 = "val2"; }`
+
+#### importieren von werten aus anderen sets
+
+```nix
+let
+s = rec {
+  inherit (builtins) toString;
+};
+in
+s
+```
+
+Ergebnis: `{ toString = <CODE>; }`
 
 ### derivation
 
