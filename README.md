@@ -289,4 +289,7 @@ simple = derivation { name = "simple"; builder = "${bash}/bin/bash"; args = [ ./
 :b simple
 ```
 
-
+```sh
+#run custom unpackphase
+phases="unpackPhase" genericBuild
+```
